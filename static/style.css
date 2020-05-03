@@ -9,7 +9,12 @@
          top: 0px;
          left: 0px;
          z-index: -1;}
-         
+
+.h2_index {
+         position: absolute;
+         top: 80px;
+         left: 320px
+}
 
 #line1 {
          display: block;
