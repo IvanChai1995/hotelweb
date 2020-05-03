@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>List</title>
+    <style>
+
+    </style>
+</head>
+<body>
+
+<h1>Список жильцов</h1>
+<table>
+    <thead>
+      <td>Номер</td>
+      <td>ФИО</td>
+      <td>Эл. Почта</td>
+      <td">Дата вселения</td>
+      <td">Дата выселения</td>
+    </thead>
+    {% for row in rows %}
+      <tr>
+          <td>{{row["id_Territory"]}}</td>
+      </tr>
+    {% endfor %}
+</table>
+<br><br>
+
+
+</body>
+</html>

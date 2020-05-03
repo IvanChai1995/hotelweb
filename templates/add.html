@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add Employee</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for( 'static', filename='style.css', v=432)}}">
+<style>
+</style>
+</head>
+<body>
+    <h1 class="h111_add">Номерной фонд</h1>
+    </div>
+	<img src="{{ url_for('static', filename='PNG1.png') }}" alt="ops image" class="imgrostelecom_add">
+	<br><h2 class="h22_add">Добавление комнаты:</h2>
+	<div id="block1">
+    </div>
+	<div id="line1">
+    </div>
+	<div id="line2">
+    </div>
+
+    <table>
+	<tr><td><a href="/" class="back_add">< Назад</a></td></tr>
+	</table>
+
+	<div id="position_add">
+    <form action="/savedetails" method="post">
+    <table>
+		<tr><td>Номер комнаты</td><td><input type="text" name="id_room" class="style_input"></td></tr>
+    	<tr><td>ФИО</td><td><input type="text" name="name" class="style_input"></td></tr>
+    	<tr><td>Почта</td><td><input type="email" name="email" class="style_input"></td></tr>
+    	<tr><td>Дата вселения</td><td><input type="text" name="StartDate" class="style_input"></td></tr>
+		<tr><td>Дата выселения</td><td><input type="text" name="EndDate" class="style_input"></td></tr>
+
+    	<tr><td><input type="submit" value="Добавить комнату" class="style_input2_add"></td></tr>
+    </table>
+    </form>
+    </div>
+
+<table border="0" class="table1_add">
+    <thead>
+      <td class="td2_add">Номер</td>
+      <td class="td2_add">ФИО</td>
+      <td class="td2_add">Эл. Почта</td>
+      <td class="td2_add">Дата вселения</td>
+      <td class="td2_add">Дата выселения</td>
+    </thead>
+    {% for row in rows %}
+      <tr class="tr1_add">
+          <td class="td1_add">{{row["id"]}}</td>
+          <td class="td1_add">{{row["name"]}}</td>
+          <td class="td1_add">{{row["email"]}}</td>
+          <td class="td1_add">{{row["StartDate"]}}</td>
+          <td class="td1_add">{{row["EndDate"]}}</td>
+      </tr >
+    {% endfor %}
+</table>
+
+</body>
+</html>

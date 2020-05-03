@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>record repopulate</title>
+      <link rel="stylesheet" type="text/css" href="{{ url_for( 'static', filename='style.css', v=448)}}">
+    <style>
+    </style>
+</head>
+<body>
+    <br><h1 class="h111_outpopulate">Засёленный номерной фонд</h1>
+<img src="{{ url_for('static', filename='PNG1.png') }}" alt="ops image" class="imgrostelecom_outpopulate">
+<div id="block1">
+</div>
+<div id="line1">
+</div>
+</div>
+  <div id="line2">
+</div>
+  <h2 class="h22_outpopulate">Выселеине комнаты: </h2>
+
+    <table>
+	<tr><td><a href="/" class="back1_outpopulate">< Назад</a></td></tr>
+	</table>
+
+<div id="position1_outpopulate">
+<form action="/outdatedetails" method="post">
+        <table>
+    		<tr><td>Номер комнаты</td><td><input type="text" name="id_room" class="style_input_outpopulate"></td></tr>
+
+    <input type="submit" value="Выселить" class="style_input2_outpopulate">
+     </table>
+</form>
+</div>
+
+<table border="0" class="table1_outpopulate">
+    <thead>
+      <td class="td2_outpopulate">Номер</td>
+      <td class="td2_outpopulate">ФИО</td>
+      <td class="td2_outpopulate">Эл. Почта</td>
+      <td class="td2_outpopulate">Дата вселения</td>
+      <td class="td2_outpopulate">Дата выселения</td>
+    </thead>
+    {% for row in rows %}
+      <tr class="tr1_outpopulate">
+          <td class="td1_outpopulate">{{row["id"]}}</td>
+          <td class="td1_outpopulate">{{row["name"]}}</td>
+          <td class="td1_outpopulate">{{row["email"]}}</td>
+          <td class="td1_outpopulate">{{row["StartDate"]}}</td>
+          <td class="td1_outpopulate">{{row["EndDate"]}}</td>
+      </tr >
+    {% endfor %}
+</table>
+
+
+
+</body>
+</html>
